@@ -24,7 +24,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //estos dos metodos se implementan de a fuerza
         tabla.delegate = self
         tabla.dataSource = self
-        Notas = defaultBD.array(forKey: "notas") as! [String]
+        
+        if defaultBD.array(forKey:"notas") == nil {
+            
+        }else{
+            Notas = defaultBD.array(forKey: "notas") as! [String]
+        }
+       
+        
+        
     }
     
     
