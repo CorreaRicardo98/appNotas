@@ -29,10 +29,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
         }else{
             Notas = defaultBD.array(forKey: "notas") as! [String]
+            fechas = defaultBD.array(forKey: "fechas") as! [String]
+        }
+        
+        if defaultBD.array(forKey:"fechas") == nil {
+            
+        }else{
+            fechas = defaultBD.array(forKey: "fechas") as! [String]
         }
        
         
         
+    }
+    
+    override func viewWillAppear(_ animated:Bool){
+        self.tabla.reloadData()
     }
     
     
@@ -53,6 +64,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.Notas.remove(at: indexPath.row)
+            self.fechas.remove(at:indexPath.row)
+            self.defaultBD.set(self.Notas,forKey:"notas")
+            self.defaultBD.set(self.fechas,forKey:"fechas")
+            self.tabla.reloadData()
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "enviar" {
             
@@ -61,7 +84,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
             nota = Notas[index!]
             
+            
             ObjDetalle.titulo = nota ?? ""
+            ObjDetalle.notas = self.Notas
+            ObjDetalle.index = index
         
         }
 
@@ -87,15 +113,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let accionAceptar = UIAlertAction(title: "Aceptar", style: .default){(_) in
             print("aceptar agregar nota")
             let today = Date()
-            let format1 = DateFormatter()
-            format1.dateStyle = .short
-            self.fechas.append(format1.string(from: today))
+            let dateFormatter = DateFormatter()
+            self.fechas.append(dateFormatter.string(from:today))
             self.Notas.append(textFiel.text ?? "no hay nota")
-            print(textFiel.text!)
             
             self.tabla.reloadData()
             
             self.defaultBD.set(self.Notas, forKey: "notas")
+            self.defaultBD.set(self.fechas,forKey:"fechas")
         }
         
         let accionCancelar = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
