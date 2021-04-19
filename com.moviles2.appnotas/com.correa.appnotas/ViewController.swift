@@ -43,6 +43,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     
     override func viewWillAppear(_ animated:Bool){
+        if defaultBD.array(forKey:"notas") == nil {
+            
+        }else{
+            self.Notas = defaultBD.array(forKey:"notas") as! [String]
+        }
+        
         self.tabla.reloadData()
     }
     

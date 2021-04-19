@@ -14,6 +14,9 @@
 		48022384262933F700044C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48022383262933F700044C4E /* Assets.xcassets */; };
 		48022387262933F700044C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48022385262933F700044C4E /* LaunchScreen.storyboard */; };
 		4802239526294AD700044C4E /* DetallesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4802239426294AD700044C4E /* DetallesController.swift */; };
+		485E9CE9262D1D990041186C /* 5b06c18efad1cae04539afdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 485E9CE8262D1D990041186C /* 5b06c18efad1cae04539afdf.png */; };
+		485E9CEC262D1FE90041186C /* pdf-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 485E9CEB262D1FE90041186C /* pdf-edit.png */; };
+		485E9CEF262D21850041186C /* yellow-note-paper-with-red-pin.zip.download in Resources */ = {isa = PBXBuildFile; fileRef = 485E9CEE262D21850041186C /* yellow-note-paper-with-red-pin.zip.download */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		48022386262933F700044C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48022388262933F700044C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4802239426294AD700044C4E /* DetallesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesController.swift; sourceTree = "<group>"; };
+		485E9CE8262D1D990041186C /* 5b06c18efad1cae04539afdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5b06c18efad1cae04539afdf.png; sourceTree = "<group>"; };
+		485E9CEB262D1FE90041186C /* pdf-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pdf-edit.png"; path = "../../../../../Downloads/pdf-edit.png"; sourceTree = "<group>"; };
+		485E9CEE262D21850041186C /* yellow-note-paper-with-red-pin.zip.download */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "yellow-note-paper-with-red-pin.zip.download"; path = "../../../../../Downloads/yellow-note-paper-with-red-pin.zip.download"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		48022379262933F600044C4E /* com.correa.appnotas */ = {
 			isa = PBXGroup;
 			children = (
+				485E9CEE262D21850041186C /* yellow-note-paper-with-red-pin.zip.download */,
+				485E9CEB262D1FE90041186C /* pdf-edit.png */,
+				485E9CE8262D1D990041186C /* 5b06c18efad1cae04539afdf.png */,
 				4802237A262933F600044C4E /* AppDelegate.swift */,
 				4802237C262933F600044C4E /* SceneDelegate.swift */,
 				4802237E262933F600044C4E /* ViewController.swift */,
@@ -127,8 +136,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485E9CE9262D1D990041186C /* 5b06c18efad1cae04539afdf.png in Resources */,
+				485E9CEF262D21850041186C /* yellow-note-paper-with-red-pin.zip.download in Resources */,
 				48022387262933F700044C4E /* LaunchScreen.storyboard in Resources */,
 				48022384262933F700044C4E /* Assets.xcassets in Resources */,
+				485E9CEC262D1FE90041186C /* pdf-edit.png in Resources */,
 				48022382262933F600044C4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
